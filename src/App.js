@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.css';
+import Layout from './components/Layout/Layout.js'
 
-function App() {
+export default () => {
   return (
     <div className="App">
-      Christmas-tree by Darina.
+     <Layout>
+  Christmas tree by Darina
+     </Layout>
     </div>
   );
-}
+};
 
-export default App;
+
