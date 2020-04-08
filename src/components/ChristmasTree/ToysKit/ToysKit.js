@@ -3,6 +3,6 @@ import classes from "./ToysKit.module.css";
 
 export default () => (
     <div className={classes.ToysKit}>
-       
+       <div className={classes.Sec}></div>
     </div>
 );
