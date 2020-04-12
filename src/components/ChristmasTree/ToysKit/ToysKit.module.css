@@ -5,6 +5,10 @@
   width: 0;
   height: 0;
   margin-bottom: 80px;
+
+  
+  flex-flow: row wrap;
+  align-content: flex-start;
 }
 .Sec {
   content: "";
