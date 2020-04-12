@@ -5,12 +5,16 @@ import classes from "./Toys.module.css";
 
      switch (type) {
 case "yellow":
-    toysClasses.push(classes.yellow)
+    toysClasses.push(classes.yellow);
     break;
+
     case "blue":
+        toysClasses.push(classes.blue);
     break;
+
     case "red":
-        default:
+        toysClasses.push(classes.red)
+    default:
     break;
      }
      return(

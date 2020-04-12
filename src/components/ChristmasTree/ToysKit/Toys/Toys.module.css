@@ -1,7 +1,32 @@
 .Toys{
     width: 30px;
     height: 30px;
-    border-radius: 25px;
+    border-radius: 100%;
+    border: 1px solid black;
+    background-color: tomato; 
+
+
+    margin-top:5px;
+}
+.yellow{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 1px solid black;
+    background-color: yellow;
+    
+}
+.blue{
+    width: 30px;
+    height: 30px;
+    border-radius:  100%;
+    border: 1px solid black;
+    background-color:blue;
+}
+.red{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
     border: 1px solid black;
     background-color: tomato;
 }

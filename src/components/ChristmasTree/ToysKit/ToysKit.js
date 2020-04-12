@@ -6,7 +6,9 @@ export default () => (
   <div className={classes.ToysKit}>
     <div className={classes.Sec}></div>
     <Toys type="red"/>
+    <Toys type="yellow"/>
     <Toys type="blue"/>
+    <Toys/>
     <Toys type="yellow"/>
     
   </div>
