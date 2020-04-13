@@ -1,0 +1,15 @@
+.ToysControls{
+    border:3px solid black;
+    background-color: sandybrown;
+    width: 400px;
+    border-radius:10px;
+    padding-top:.5rem;
+    padding-left:.5rem;
+    margin-left: 350px;
+
+    display:flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: space-evenly;
+   
+}
