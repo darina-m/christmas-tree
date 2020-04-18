@@ -2,7 +2,7 @@ import React from "react";
 import Toys from "./Toys/Toys"
 import classes from "./ToysKit.module.css";
 
-export default ({toys}) => {
+export default ({price,toys}) => {
   let toysOutput = [];
 
 Object.keys(toys).forEach(type => {
@@ -16,7 +16,10 @@ toysOutput.sort((a,b)=> Math.random() < 0.5 ? 1 : -1);
   return (
     <div className={classes.ToysKit}>
     <div className={classes.Sec}></div>
-    {toysOutput}
+    <div className={classes.bento}>
+      {toysOutput}
+    </div>
+  <div className={classes.price}>Total price:{price} som</div>
   </div>
   );
   };

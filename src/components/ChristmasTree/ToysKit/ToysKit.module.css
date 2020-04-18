@@ -1,4 +1,4 @@
-.ToysKit {
+.ToysKit .bento {
   border-left: 200px solid transparent;
   border-right: 200px solid transparent;
   border-bottom: 400px solid #6aa16a;
@@ -22,4 +22,8 @@
   top: 400px;
   left: -17px;
   background-color: #5f3915;
+}
+.ToysKit .price{
+  font-size: 25px;
+  font-weight: bold;
 }
