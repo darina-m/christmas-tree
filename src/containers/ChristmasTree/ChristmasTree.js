@@ -10,10 +10,27 @@ blue:3,
 red:3,
 });
 
+function addToy(type){
+const newToys = {...toys};
+newToys[type]++;
+setToys(newToys);
+}
+
+function removeToy(type){
+  if(toys[type] >=1) {
+    const newToys = {...toys};
+  newToys[type]--;
+  setToys(newToys);
+  }
+  
+}
+
   return  (
   <div className={classes.ChristmasTree}>
        <ToysKit toys={toys} />
-       <ToysControls/>
+       <ToysControls
+       addToy={addToy}
+       removeToy={removeToy} />
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 import ToysControl from "./ToysControl/ToysControl"; 
 import classes from "./ToysControls.module.css";
 
-export default ()=>{
+export default ({addToy,removeToy})=>{
 const controls = [
   {label:"Red", type:"red"},
   {label:"Blue", type:"blue"},
@@ -10,7 +10,7 @@ const controls = [
 ];
 
 const controlsOutput = controls.map((control) =>(
-<ToysControl label={control.label}/>
+<ToysControl control={control} addToy={addToy} removeToy={removeToy}/>
 ));
 
     return(
