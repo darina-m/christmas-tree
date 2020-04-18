@@ -39,10 +39,12 @@ setPrice(newPrice);
   
 }
 
+
   return  (
   <div className={classes.ChristmasTree}>
        <ToysKit price={price} toys={toys} />
        <ToysControls
+       toys={toys}
        addToy={addToy}
        removeToy={removeToy} />
     </div>

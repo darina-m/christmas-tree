@@ -8,10 +8,15 @@ const CONTROLS = [
   {label:"Yellow", type:"yellow"},
 ];
 
-export default ({addToy,removeToy})=>{
+export default ({toys, addToy,removeToy})=>{
 
 const controlsOutput = CONTROLS.map((control) =>(
-<ToysControl control={control} addToy={addToy} removeToy={removeToy}/>
+<ToysControl 
+control={control} 
+addToy={addToy} 
+removeToy={removeToy}
+disabled={toys[control.type] === 0}
+/>
 ));
 
     return(
