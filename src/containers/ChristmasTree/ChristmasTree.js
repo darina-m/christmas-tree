@@ -4,16 +4,22 @@ import ToysControls from "../../components/ChristmasTree/ToysControls/ToysContro
 import classes from "./ChristmasTree.module.css";
 
 const PRICES = {
-yellow:5,
-red:3,
-blue:6,
+  blueBall:7,
+  pinkBall:9,
+  yellowBall:10,
+  orangeBall:8,
+  lightBlueBall:12,
+  greenBall:8
 };
 
 export default () => {
 const [toys , setToys] = useState({
-yellow:0,
-blue:0,
-red:0,
+blueBall:0,
+pinkBall:0,
+yellowBall:0,
+orangeBall:0,
+lightBlueBall:0,
+greenBall:0
 });
 
 const [price, setPrice] = useState(100);

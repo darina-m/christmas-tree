@@ -13,16 +13,7 @@
   justify-content: space-evenly;
   
 }
-.Sec {
-  content: "";
-  width: 20px;
-  height: 40px;
-  position: relative;
-  display: block;
-  top: 400px;
-  left: -17px;
-  background-color: #5f3915;
-}
+
 .ToysKit .price{
   font-size: 25px;
   font-weight: bold;

@@ -1,5 +1,6 @@
 import React from "react";
-import Toys from "./Toys/Toys"
+import Toys from "./Toys/Toys";
+import tree from "../../../assests/tree.jpg";
 import classes from "./ToysKit.module.css";
 
 export default ({price,toys}) => {
@@ -15,7 +16,7 @@ toysOutput.sort((a,b)=> Math.random() < 0.5 ? 1 : -1);
 
   return (
     <div className={classes.ToysKit}>
-    <div className={classes.Sec}></div>
+   
     <div className={classes.bento}>
       {toysOutput}
     </div>
