@@ -15,6 +15,7 @@ export default ({toys, addToy,removeToy})=>{
 
 const controlsOutput = CONTROLS.map((control) =>(
 <ToysControl 
+key={control.type}
 control={control} 
 addToy={addToy} 
 removeToy={removeToy}
