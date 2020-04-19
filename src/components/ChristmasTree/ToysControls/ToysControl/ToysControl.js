@@ -9,13 +9,13 @@ className={classes.less}
 onClick={()=>removeToy(control.type)}
 disabled={disabled}
 >
-Less
+-
 </button>
 <button 
 className={classes.more} 
 onClick={()=>addToy(control.type)}
 >
-More
++
 </button>
     </div>
 );

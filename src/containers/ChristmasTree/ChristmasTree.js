@@ -9,7 +9,7 @@ const PRICES = {
   yellowBall:10,
   orangeBall:8,
   lightBlueBall:12,
-  greenBall:8
+  greenBall:8,
 };
 
 export default () => {
