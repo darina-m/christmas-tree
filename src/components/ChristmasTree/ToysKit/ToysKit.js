@@ -16,7 +16,8 @@ toysOutput.sort((a,b)=> Math.random() < 0.5 ? 1 : -1);
 
   return (
     <div className={classes.ToysKit}>
-   
+   <div className={classes.tree}></div>
+   <div className={classes.stem}></div>
     <div className={classes.bento}>
       {toysOutput}
     </div>
