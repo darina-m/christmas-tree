@@ -5,7 +5,7 @@ import classes from "./Toys.module.css";
         classes.Toys,
         classes[type]
     ];
-    
+
      return(
         <div className={toysClasses.join(" ")}>
          

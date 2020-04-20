@@ -3,12 +3,12 @@ import ToysControl from "./ToysControl/ToysControl";
 import classes from "./ToysControls.module.css";
 
 const CONTROLS = [
-  {label:"Pink", type:"pinkBall"},
-  {label:"Orange", type:"orangeBall"},
-  {label:"Green", type:"greenBall"},
-  {label:"Light Blue", type:"lightBlueBall"},
-  {label:"Blue", type:"blueBall"},
-  {label:"Yellow", type:"yellowBall"},
+  {label:"Pink ball", type:"pinkBall"},
+  {label:"Orange ball", type:"orangeBall"},
+  {label:"Green ball", type:"greenBall"},
+  {label:"Light-blue ball", type:"lightBlueBall"},
+  {label:"Blue ball", type:"blueBall"},
+  {label:"Yellow ball", type:"yellowBall"},
 ];
 
 export default ({toys, addToy,removeToy})=>{
