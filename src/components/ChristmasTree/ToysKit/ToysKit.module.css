@@ -6,6 +6,12 @@
   
 }
 .ToysKit .bento {
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  border-bottom: 400px solid #6aa16a;
+  width: 0;
+  height: 0;
+  margin-bottom: 80px;
 
   flex-flow: row wrap;
   align-content: flex-start;
@@ -13,21 +19,14 @@
   justify-content: space-evenly;
   
 }
-.ToysKit .tree{
-  border-left: 200px solid transparent;
-  border-right: 200px solid transparent;
-  border-bottom: 400px solid #6aa16a;
-  width: 0;
-  height: 0;
-  margin-bottom: 80px;
-}
+
 .stem{
   width: 10px;
   height: 40px;
   position: relative;
   display:block;
-  top:-80px;
-  left: 192px;
+  top:440px;
+  left: 188px;
   background-color: #5f3915;
 }
 
