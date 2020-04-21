@@ -23,14 +23,24 @@ greenBall:0
 });
 
 const [price, setPrice] = useState(100);
+const [canOrder , setCanOrder] = useState (false);
+
+function checkCanOrder(toys){
+ const total = Object.keys(toys).reduce((total, toy)=>{
+  return total + toys[toy];
+ }, 0);
+ setCanOrder(total > 0);
+}
 
 function addToy(type){
 const newToys = {...toys};
 newToys[type]++;
 setToys(newToys);
+checkCanOrder(newToys);
 
 const newPrice = price + PRICES[type];
 setPrice(newPrice);
+
 }
 
 function removeToy(type){
@@ -38,9 +48,11 @@ function removeToy(type){
     const newToys = {...toys};
   newToys[type]--;
   setToys(newToys);
+checkCanOrder(newToys);
 
   const newPrice = price - PRICES[type];
-setPrice(newPrice);
+  setPrice(newPrice);
+  
   }
   
 }
@@ -50,6 +62,7 @@ setPrice(newPrice);
   <div className={classes.ChristmasTree}>
        <ToysKit price={price} toys={toys} />
        <ToysControls
+       canOrder={canOrder}
        toys={toys}
        addToy={addToy}
        removeToy={removeToy} />
