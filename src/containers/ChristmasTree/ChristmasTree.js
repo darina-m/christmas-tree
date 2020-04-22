@@ -39,6 +39,10 @@ export default () => {
     setIsOrdering(true);
   }
 
+  function cancelOrder(){
+    setIsOrdering(false);
+  }
+
   function addToy(type) {
     const newToys = { ...toys };
     newToys[type]++;
@@ -71,7 +75,7 @@ export default () => {
         addToy={addToy}
         removeToy={removeToy}
       />
-      <Modal show={isOrdering}>
+      <Modal show={isOrdering} hideCallback={cancelOrder}>
         <OrderSummary toys={toys} />
       </Modal>
     </div>
