@@ -1,36 +1,45 @@
-.ToysKit{
+.ToysKit {
   flex-flow: row wrap;
   align-content: flex-start;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  
 }
+
 .ToysKit .bento {
-  border-left: 200px solid transparent;
-  border-right: 200px solid transparent;
-  border-bottom: 400px solid #00a501;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  background-image: url(../../../assests/Tree.jpg);
+  background-size: cover;
+  width: 380px;
+  height: 485px;
+  margin: 0 auto;
+}
+.ToysKit .treeBento {
+  position: relative;
+  top: 20px;
+  left: 13px;
+  border-left: 180px solid transparent;
+  border-right: 180px solid transparent;
+  border-bottom: 405px solid transparent;
   width: 0;
   height: 0;
   margin-bottom: 80px;
-
-  flex-flow: row wrap;
-  align-content: flex-start;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  
+  transform: rotate(-2deg);
 }
-
-.stem{
+.stem {
   width: 10px;
   height: 40px;
   position: relative;
-  display:block;
-  top:440px;
+  display: block;
+  top: 440px;
   left: 188px;
   background-color: #5f3915;
 }
 
-.ToysKit .price{
+.ToysKit .price {
   font-size: 25px;
   font-weight: bold;
 }

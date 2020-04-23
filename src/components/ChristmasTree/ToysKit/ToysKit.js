@@ -15,8 +15,9 @@ export default ({ price, toys }) => {
 
   return (
     <div className={classes.ToysKit}>
-      <div className={classes.stem}></div>
-      <div className={classes.bento}>{toysOutput}</div>
+      <div className={classes.bento}>
+        <div className={classes.treeBento}>{toysOutput}</div>
+      </div>
       <div className={classes.price}>Total price:{price} som</div>
     </div>
   );
