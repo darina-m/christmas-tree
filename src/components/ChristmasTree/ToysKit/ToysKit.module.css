@@ -16,14 +16,17 @@
   width: 380px;
   height: 485px;
   margin: 0 auto;
+  transform: rotate(-2deg);
+  transform: rotate(2deg);
 }
 .ToysKit .treeBento {
   position: relative;
-  top: 20px;
-  left: 13px;
-  border-left: 180px solid transparent;
-  border-right: 180px solid transparent;
-  border-bottom: 405px solid transparent;
+  top: 10px;
+  left: -17px;
+  border-left: 212px solid transparent;
+  border-right:212px solid transparent;
+  border-bottom: 450px solid transparent;
+  border-radius: 165px;
   width: 0;
   height: 0;
   margin-bottom: 80px;
