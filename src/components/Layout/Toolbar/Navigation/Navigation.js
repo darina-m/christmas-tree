@@ -4,7 +4,7 @@ import classes from "./Navigation.module.css";
 
 export default () => (
   <ul className={classes.Navigation}>
-    <NavigationItem >Christmas-tree</NavigationItem>
-    <NavigationItem >Checkout</NavigationItem>
+    <NavigationItem url="/">Christmas-tree</NavigationItem>
+    <NavigationItem url="/checkout">Checkout</NavigationItem>
   </ul>
 );
