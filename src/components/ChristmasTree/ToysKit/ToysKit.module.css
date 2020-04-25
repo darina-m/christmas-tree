@@ -13,7 +13,8 @@
 
   background-image: url(../../../assests/Tree.jpg);
   background-size: cover;
-  width: 380px;
+  width: 100%;
+  max-width: 380px;
   height: 485px;
   margin: 0 auto;
   transform: rotate(-2deg);
@@ -45,4 +46,5 @@
 .ToysKit .price {
   font-size: 25px;
   font-weight: bold;
+  margin-left: 130px;
 }

@@ -7,12 +7,12 @@
 color:#930d26;
 font-weight: bold;
 font-family: "Mountains of Christmas" , cursive;
-padding:.5rem .5rem;
-font-size: 20px;
+padding:.5rem .9rem;
+font-size: 1rem;
 }
 .ToysControl button{
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
     border:none;
     border-radius: 50%;
     background-color: #e4442f;
@@ -24,6 +24,11 @@ font-size: 20px;
 }
 .ToysControl button:not(:disabled):hover{
     opacity: .8;
+}
+@media(min-width:500px){
+    .ToysControl .label{
+        font-size: 23px;
+        }
 }
 
 

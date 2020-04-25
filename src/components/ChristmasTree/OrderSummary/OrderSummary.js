@@ -11,23 +11,28 @@ const LABELS = {
   yellowBall: "Yellow ball",
 };
 
-export default ({ toys , cancelOrder, finishOrder }) => {
+export default ({ toys, cancelOrder, finishOrder, price }) => {
   const toysOutput = Object.keys(toys)
     .filter((toy) => toys[toy] > 0)
     .map((toy) => (
       <li>
         {LABELS[toy]}: {toys[toy]}
       </li>
-    )); 
+    ));
 
   return (
     <div className={classes.OrderSummary}>
       <h2>Your order</h2>
       <p>Congratulations! You've built a best christmas tree of all time!</p>
       <ul>{toysOutput}</ul>
+      <p>Total price: {price.toFixed(2)} som</p>
       <p>Would you like to checkout?</p>
-      <Button click={finishOrder} green>Checkout</Button>
-      <Button click={cancelOrder} red>Cancel</Button>
+      <Button click={finishOrder} green>
+        Checkout
+      </Button>
+      <Button click={cancelOrder} red>
+        Cancel
+      </Button>
     </div>
   );
 };
