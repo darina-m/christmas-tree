@@ -17,8 +17,6 @@
   max-width: 380px;
   height: 485px;
   margin: 0 auto;
-  transform: rotate(-2deg);
-  transform: rotate(2deg);
 }
 .ToysKit .treeBento {
   position: relative;
