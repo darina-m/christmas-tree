@@ -5,3 +5,11 @@
 
     background-color: #e3b8c1;
 }
+.Toolbar nav{
+    display: none;
+}
+@media (min-width: 550px) {
+    .Toolbar nav{
+        display: block;
+    }
+}

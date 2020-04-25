@@ -1,0 +1,23 @@
+.NavigationItem a{
+   display: flex;
+   align-items: center;
+   padding:1rem;
+   height: 70px;
+
+   font-family: "Mountains of Christmas";
+   text-decoration: none;
+   color:#fc5856;
+   font-size: 1.5rem;
+   border-bottom:3px solid transparent;
+}
+.NavigationItem a:hover{
+    font-size: 1.6rem;
+    border-bottom:5px solid #fc8e5b;
+    background-color: rgba(255, 255, 255, .3);
+
+    transition: all .3s ease-in;
+ }
+ .NavigationItem .active{
+     border-top-color: white;
+     background-color: rgba(255, 255, 255, .1);
+ }

@@ -18,7 +18,7 @@ export default ({ price, toys }) => {
       <div className={classes.bento}>
         <div className={classes.treeBento}>{toysOutput}</div>
       </div>
-      <div className={classes.price}>{price.toFixed(2)} som</div>
+      <div className={classes.price}>{price} som</div>
     </div>
   );
 };
