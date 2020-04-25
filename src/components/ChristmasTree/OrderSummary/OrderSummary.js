@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../../UI/Button/Button";
 import classes from "./OrderSummary.module.css";
 
 const LABELS = {
@@ -10,7 +11,7 @@ const LABELS = {
   yellowBall: "Yellow ball",
 };
 
-export default ({ toys }) => {
+export default ({ toys , cancelOrder, finishOrder }) => {
   const toysOutput = Object.keys(toys)
     .filter((toy) => toys[toy] > 0)
     .map((toy) => (
@@ -25,8 +26,8 @@ export default ({ toys }) => {
       <p>Congratulations! You've built a best christmas tree of all time!</p>
       <ul>{toysOutput}</ul>
       <p>Would you like to checkout?</p>
-      <button>Checkout</button>
-      <button>Cancel</button>
+      <Button click={finishOrder} green>Checkout</Button>
+      <Button click={cancelOrder} red>Cancel</Button>
     </div>
   );
 };

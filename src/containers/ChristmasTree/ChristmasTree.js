@@ -39,8 +39,12 @@ export default () => {
     setIsOrdering(true);
   }
 
-  function cancelOrder(){
+  function cancelOrder() {
     setIsOrdering(false);
+  }
+
+  function finishOrder() {
+    alert("You are on the checkout page!");
   }
 
   function addToy(type) {
@@ -76,7 +80,11 @@ export default () => {
         removeToy={removeToy}
       />
       <Modal show={isOrdering} hideCallback={cancelOrder}>
-        <OrderSummary toys={toys} />
+        <OrderSummary
+          toys={toys}
+          finishOrder={finishOrder}
+          cancelOrder={cancelOrder}
+        />
       </Modal>
     </div>
   );
