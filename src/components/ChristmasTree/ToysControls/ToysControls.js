@@ -1,5 +1,6 @@
 import React from "react";
 import ToysControl from "./ToysControl/ToysControl";
+import Button from "../../UI/Button/Button";
 import classes from "./ToysControls.module.css";
 
 const CONTROLS = [
@@ -25,13 +26,9 @@ export default ({ canOrder, toys, addToy, removeToy, startOrder }) => {
   return (
     <div className={classes.ToysControls}>
       {controlsOutput}
-      <button
-        onClick={startOrder}
-        disabled={!canOrder}
-        className={classes.orderButton}
-      >
-        ORDER
-      </button>
+      <Button click={startOrder} enabled={canOrder}>
+        Order
+      </Button>
     </div>
   );
 };

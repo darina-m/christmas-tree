@@ -25,6 +25,8 @@ export default ({ toys }) => {
       <p>Congratulations! You've built a best christmas tree of all time!</p>
       <ul>{toysOutput}</ul>
       <p>Would you like to checkout?</p>
+      <button>Checkout</button>
+      <button>Cancel</button>
     </div>
   );
 };

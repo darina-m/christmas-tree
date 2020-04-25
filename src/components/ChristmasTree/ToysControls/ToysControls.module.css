@@ -13,22 +13,3 @@
     align-items: center;
    
 }
-.orderButton{
-width: 75px;    
-border:none;
-background-color: khaki;
-font-weight: bold;
-border-radius: 18px;
-border: 2px solid gold;
-cursor: pointer;
-font-family: "Mountains of Christmas" ;
-padding: 5px 12px;
-font-size: 16px;
-text-align: left;
-}
-.orderButton:disabled{
-    opacity: .5;
-}
-.orderButton:not(:disabled):hover{
-    opacity: .8;
-}
