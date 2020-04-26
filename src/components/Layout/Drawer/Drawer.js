@@ -1,5 +1,8 @@
 import React from "react";
+import classes from "./Drawer.module.css";
 
 export default () => (
-<div className="SideDrawer">SideDrawer</div>
+<div className={classes.Drawer}>
+    SideDrawer
+    </div>
 );
