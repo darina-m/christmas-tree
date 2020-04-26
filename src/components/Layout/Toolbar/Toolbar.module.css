@@ -3,12 +3,12 @@
     justify-content: space-between;
    
 
-    background-color: #e3b8c1;
+    background-color: khaki;
 }
 .Toolbar nav{
     display: none;
 }
-@media (min-width: 550px) {
+@media (min-width: 500px) {
     .Toolbar nav{
         display: block;
     }
