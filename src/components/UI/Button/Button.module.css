@@ -1,10 +1,10 @@
 .Button {
   width: 75px;
   border: none;
-  background-color: khaki;
+  background-color: lightgoldenrodyellow;
   font-weight: bold;
   border-radius: 18px;
-  border: 2px solid gold;
+  border: 3px solid gold;
   cursor: pointer;
   font-family: "Mountains of Christmas";
   padding: 5px 12px;
@@ -12,6 +12,7 @@
   text-align: center;
   text-transform: uppercase;
   margin-top: 4px;
+  box-shadow: 0 0 6px orangered;
 
 }
 .Button:disabled {
