@@ -25,7 +25,7 @@ export default ({ toys, cancelOrder, finishOrder, price }) => {
       <h2>Your order</h2>
       <p>Congratulations! You've built a best christmas tree of all time!</p>
       <ul>{toysOutput}</ul>
-      <h3>Total price:{price} som</h3>
+      <h2>Total price:{price} som</h2>
       <p>Would you like to checkout?</p>
       <Button click={finishOrder} green>
         Checkout
