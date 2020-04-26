@@ -7,4 +7,4 @@ export default () => (
      <img src={logo} />
      <span>Christamas-Tree</span>
     </div>
-)
+);
