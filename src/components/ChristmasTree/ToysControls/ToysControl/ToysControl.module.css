@@ -1,34 +1,32 @@
-.ToysControl{
-    display: flex;
-    align-items: center;
-    margin-bottom: .5rem;
+.ToysControl {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
 }
-.ToysControl .label{
-color:#930d26;
-font-weight: bold;
-font-family: "Mountains of Christmas" , cursive;
-padding:.5rem .9rem;
-font-size: 1rem;
+.ToysControl .label {
+  color:  #930d26;
+  font-weight: bold;
+  font-family: "Mountains of Christmas", cursive;
+  padding: 0.5rem 0.9rem;
+  font-size: 1rem;
 }
-.ToysControl button{
-    width: 23px;
-    height: 23px;
-    border:none;
-    border-radius: 50%;
-    background-color: #e4442f;
-    color: #f1ad28;
-    cursor:pointer;
+.ToysControl button {
+  width: 23px;
+  height: 23px;
+  border: none;
+  border-radius: 50%;
+  background-color: #930d26;
+  color: #f1ad28;
+  cursor: pointer;
 }
-.ToysControl button:disabled{
-    opacity: .5;
+.ToysControl button:disabled {
+  opacity: 0.5;
 }
-.ToysControl button:not(:disabled):hover{
-    opacity: .8;
+.ToysControl button:not(:disabled):hover {
+  opacity: 0.8;
 }
-@media(min-width:500px){
-    .ToysControl .label{
-        font-size: 23px;
-        }
+@media (min-width: 500px) {
+  .ToysControl .label {
+    font-size: 23px;
+  }
 }
-
-

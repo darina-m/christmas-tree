@@ -1,5 +1,6 @@
 .Button {
   width: 75px;
+  color:#930d26;
   border: none;
   background-color: lightgoldenrodyellow;
   font-weight: bold;
@@ -12,7 +13,7 @@
   text-align: center;
   text-transform: uppercase;
   margin-top: 4px;
-  box-shadow: 0 0 6px orangered;
+  box-shadow: 0 0 6px #930d26;
 
 }
 .Button:disabled {

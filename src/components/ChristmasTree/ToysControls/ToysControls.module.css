@@ -1,15 +1,14 @@
-.ToysControls{
-    border:3px solid #cf1546;
-    background-color:#ecd070;
-    width: 380px;
-    height:420px;
-    border-radius:10px;
-   padding-top: 20px;
-    margin:5px;
-    margin-top: 20px;
+.ToysControls {
+  border: 3px solid #cf1546;
+  background-color:  khaki;
+  width: 380px;
+  height: 420px;
+  border-radius: 10px;
+  padding-top: 20px;
+  margin: 5px;
+  margin-top: 20px;
 
-    display:flex;
-    flex-flow: column nowrap;
-    align-items: center;
-   
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
