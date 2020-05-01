@@ -21,14 +21,14 @@
 .ToysKit .treeBento {
   position: relative;
   top: 10px;
-  left: -17px;
+  left: -20px;
   border-left: 212px solid transparent;
   border-right:212px solid transparent;
   border-bottom: 450px solid transparent;
   width: 0;
   height: 0;
   margin-bottom: 80px;
-  transform: rotate(-2deg);
+  
 }
 
 .ToysKit .price {

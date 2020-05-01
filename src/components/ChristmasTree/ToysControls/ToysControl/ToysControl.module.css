@@ -18,6 +18,7 @@
   background-color: #930d26;
   color: #f1ad28;
   cursor: pointer;
+
 }
 .ToysControl button:disabled {
   opacity: 0.5;

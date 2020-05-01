@@ -2,12 +2,13 @@ import React from "react";
 import Toys from "./Toys/Toys";
 import classes from "./ToysKit.module.css";
 
-export default ({ price, toys }) => {
+export default ({ price, toys , stylePos }) => {
   let toysOutput = [];
+  
 
-  Object.keys(toys).forEach((type) => {
+  Object.keys(toys).forEach((type , stylePos) => {
     for (let i = 0; i < toys[type]; i++) {
-      toysOutput.push(<Toys key={type + i} type={type} />);
+      toysOutput.push(<Toys key={type + i} type={type} style={stylePos} />);
     }
   });
 
@@ -15,8 +16,8 @@ export default ({ price, toys }) => {
 
   return (
     <div className={classes.ToysKit}>
-      <div className={classes.bento}>
-        <div className={classes.treeBento}>{toysOutput}</div>
+      <div className={classes.bento} >
+        <div className={classes.treeBento} >{toysOutput}</div>
       </div>
       <div className={classes.price}>{price} som</div>
     </div>
