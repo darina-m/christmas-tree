@@ -4,21 +4,21 @@ import classes from "./Toys.module.css";
 export default memo(({ type }) => {
   const toysClasses = [classes.Toys, classes[type]];
 
-  const pd = 40;
-  const th = 450;
-  const tw = 212;
+  const pd = 50;
+  const th = 430;
+  const tw = 300;
 
   let stylePos = null;
   const getPosition = (ir) => {
 
 
-    const ix = Math.floor(Math.random() * tw, 1);
-    const iy = Math.floor(Math.random() * th, 5);
+    const ix = Math.floor(Math.random() * tw,20);
+    const iy = Math.floor(Math.random() * th,20);
 
     const distance =
       Math.sqrt(Math.pow(ix - th, 2) + Math.pow(iy - th, 2)) + ir;
 
-    return distance < th ? { x: ix - ir, y: iy - ir } : getPosition(ir);
+    return distance < th ? { x: ix - ir, y: iy - ir } : getPosition(pd);
   };
 
   switch (type) {

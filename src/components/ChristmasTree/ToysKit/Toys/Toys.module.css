@@ -3,6 +3,7 @@
     height:36px;
   
    background-repeat: round;
+   transform: rotate(20deg);
   
 }
 .yellowBall{
