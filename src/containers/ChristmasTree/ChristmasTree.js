@@ -4,6 +4,7 @@ import ToysControls from "../../components/ChristmasTree/ToysControls/ToysContro
 import Modal from "../../components/UI/Modal/Modal";
 import classes from "./ChristmasTree.module.css";
 import OrderSummary from "../../components/ChristmasTree/OrderSummary/OrderSummary";
+import axios from "../../axios";
 
 const PRICES = {
   blueBall: 7,

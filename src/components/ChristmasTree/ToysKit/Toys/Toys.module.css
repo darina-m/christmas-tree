@@ -1,27 +1,25 @@
-.Toys{
-    width: 36px;
-    height:36px;
-  
-   background-repeat: round;
-   transform: rotate(20deg);
-  
+.Toys {
+  width: 36px;
+  height: 36px;
+
+  background-repeat: round;
+  transform: rotate(20deg);
 }
-.yellowBall{
-   
-    background-image: url(../../../../assests/yellowBall.png);
+.yellowBall {
+  background-image: url(../../../../assests/yellowBall.png);
 }
-.blueBall{
-   background-image: url(../../../../assests/blueBall.png);
+.blueBall {
+  background-image: url(../../../../assests/blueBall.png);
 }
-.pinkBall{
-    background-image: url(../../../../assests/pinkBall.png);
+.pinkBall {
+  background-image: url(../../../../assests/pinkBall.png);
 }
-.lightBlueBall{
-    background-image: url(../../../../assests/lightblueBall.png);
+.lightBlueBall {
+  background-image: url(../../../../assests/lightblueBall.png);
 }
-.greenBall{
-    background-image: url(../../../../assests/greenBall.png);
+.greenBall {
+  background-image: url(../../../../assests/greenBall.png);
 }
-.orangeBall{
-    background-image: url(../../../../assests/orangeBall.png);
+.orangeBall {
+  background-image: url(../../../../assests/orangeBall.png);
 }

@@ -1,15 +1,15 @@
-.Toolbar{
-    display:flex;
-    justify-content: space-between;
-   
-    background-color: khaki;
+.Toolbar {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: khaki;
 }
 
-.Toolbar nav{
-    display: none;
+.Toolbar nav {
+  display: none;
 }
 @media (min-width: 500px) {
-    .Toolbar nav{
-        display: block;
-    }
+  .Toolbar nav {
+    display: block;
+  }
 }

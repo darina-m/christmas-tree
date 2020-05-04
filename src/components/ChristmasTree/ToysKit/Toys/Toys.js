@@ -10,10 +10,8 @@ export default memo(({ type }) => {
 
   let stylePos = null;
   const getPosition = (ir) => {
-
-
-    const ix = Math.floor(Math.random() * tw,20);
-    const iy = Math.floor(Math.random() * th,20);
+    const ix = Math.floor(Math.random() * tw, 20);
+    const iy = Math.floor(Math.random() * th, 20);
 
     const distance =
       Math.sqrt(Math.pow(ix - th, 2) + Math.pow(iy - th, 2)) + ir;
