@@ -28,6 +28,7 @@ export default () => {
   const [price, setPrice] = useState(100);
   const [canOrder, setCanOrder] = useState(false);
   const [isOrdering, setIsOrdering] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   function checkCanOrder(toys) {
     const total = Object.keys(toys).reduce((total, toy) => {
@@ -41,25 +42,29 @@ export default () => {
   }
 
   function cancelOrder() {
-    setIsOrdering(false);  
+    setIsOrdering(false);
   }
 
   function finishOrder() {
     const order = {
       toys: toys,
       price: price,
-      delivery:"Fast",
-      customer:{
+      delivery: "Fast",
+      customer: {
         name: "Bakyt",
         phone: "0700700700",
-        address:{
-          street:"123 Gebze",
-          city:"Karakol"
+        address: {
+          street: "123 Gebze",
+          city: "Karakol",
         },
       },
     };
 
-    axios.post("/orders.json", order).then((response) => console.log(response));
+    setLoading(true);
+    axios.post("/orders.json", order).then((response) => {
+      setLoading(false);
+      setIsOrdering(false);
+    });
   }
 
   function addToy(type) {
@@ -83,6 +88,17 @@ export default () => {
       setPrice(newPrice);
     }
   }
+  let orderSummary = "Loading...";
+  if (!loading) {
+    orderSummary = (
+      <OrderSummary
+        toys={toys}
+        finishOrder={finishOrder}
+        cancelOrder={cancelOrder}
+        price={price}
+      />
+    );
+  }
 
   return (
     <div className={classes.ChristmasTree}>
@@ -95,12 +111,7 @@ export default () => {
         removeToy={removeToy}
       />
       <Modal show={isOrdering} hideCallback={cancelOrder}>
-        <OrderSummary
-          toys={toys}
-          finishOrder={finishOrder}
-          cancelOrder={cancelOrder}
-          price={price}
-        />
+        {orderSummary}
       </Modal>
     </div>
   );
