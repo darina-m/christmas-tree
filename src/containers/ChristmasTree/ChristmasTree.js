@@ -5,6 +5,7 @@ import Modal from "../../components/UI/Modal/Modal";
 import classes from "./ChristmasTree.module.css";
 import OrderSummary from "../../components/ChristmasTree/OrderSummary/OrderSummary";
 import axios from "../../axios";
+import Spinner from "../../components/UI/Spinner/Spinner";
 
 const PRICES = {
   blueBall: 7,
@@ -88,7 +89,7 @@ export default () => {
       setPrice(newPrice);
     }
   }
-  let orderSummary = "Loading...";
+  let orderSummary = <Spinner/>;
   if (!loading) {
     orderSummary = (
       <OrderSummary
