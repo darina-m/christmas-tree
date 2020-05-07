@@ -41,11 +41,25 @@ export default () => {
   }
 
   function cancelOrder() {
-    setIsOrdering(false);
+    setIsOrdering(false);  
   }
 
   function finishOrder() {
-    alert("You are on the checkout page!");
+    const order = {
+      toys: toys,
+      price: price,
+      delivery:"Fast",
+      customer:{
+        name: "Bakyt",
+        phone: "0700700700",
+        address:{
+          street:"123 Gebze",
+          city:"Karakol"
+        },
+      },
+    };
+
+    axios.post("/orders.json", order).then((response) => console.log(response));
   }
 
   function addToy(type) {
