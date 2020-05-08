@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import ToysKit from "../../components/ChristmasTree/ToysKit/ToysKit";
 import ToysControls from "../../components/ChristmasTree/ToysControls/ToysControls";
 import Modal from "../../components/UI/Modal/Modal";
@@ -6,6 +7,7 @@ import classes from "./ChristmasTree.module.css";
 import OrderSummary from "../../components/ChristmasTree/OrderSummary/OrderSummary";
 import axios from "../../axios";
 import Spinner from "../../components/UI/Spinner/Spinner";
+import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 
 const PRICES = {
   blueBall: 7,
@@ -16,7 +18,7 @@ const PRICES = {
   greenBall: 8,
 };
 
-export default () => {
+export default withErrorHandler(() => {
   const [toys, setToys] = useState({
     blueBall: 0,
     pinkBall: 0,
@@ -116,4 +118,4 @@ export default () => {
       </Modal>
     </div>
   );
-};
+}, axios);
