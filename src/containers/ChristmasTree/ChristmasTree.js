@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
 import ToysKit from "../../components/ChristmasTree/ToysKit/ToysKit";
 import ToysControls from "../../components/ChristmasTree/ToysControls/ToysControls";
 import Modal from "../../components/UI/Modal/Modal";

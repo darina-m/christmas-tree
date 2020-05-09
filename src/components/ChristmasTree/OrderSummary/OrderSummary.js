@@ -15,7 +15,7 @@ export default ({ toys, cancelOrder, finishOrder, price }) => {
   const toysOutput = Object.keys(toys)
     .filter((toy) => toys[toy] > 0)
     .map((toy) => (
-      <li>
+      <li key={toys}>
         {LABELS[toy]}: {toys[toy]}
       </li>
     ));
