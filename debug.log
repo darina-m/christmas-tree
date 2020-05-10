@@ -10,3 +10,4 @@
 [0510/164001.139:ERROR:process_reader_win.cc(90)] NtQuerySystemInformation: {Недостаточно квот} Недостаточно квот на виртуальную память или файл подкачки для завершения требуемой операции. (0xc0000017)
 [0510/164001.171:ERROR:exception_snapshot_win.cc(98)] thread ID 3612 not found in process
 [0510/165009.105:ERROR:process_info.cc(375)] NtQuerySystemInformation SystemExtendedHandleInformation: {Недостаточно квот} Недостаточно квот на виртуальную память или файл подкачки для завершения требуемой операции. (0xc0000017)
+[0511/011139.659:ERROR:process_info.cc(375)] NtQuerySystemInformation SystemExtendedHandleInformation: {Недостаточно квот} Недостаточно квот на виртуальную память или файл подкачки для завершения требуемой операции. (0xc0000017)

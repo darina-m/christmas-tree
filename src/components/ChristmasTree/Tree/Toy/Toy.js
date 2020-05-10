@@ -6,12 +6,12 @@ export default memo(({ type }) => {
 
   const pd = 50;
   const th = 430;
-  const tw = 300;
+  const tw = 290;
 
   let stylePos = null;
   const getPosition = (ir) => {
-    const ix = Math.floor(Math.random() * tw, 20);
-    const iy = Math.floor(Math.random() * th, 20);
+    const ix = Math.floor(Math.random() * tw, 5);
+    const iy = Math.floor(Math.random() * th, 12);
 
     const distance =
       Math.sqrt(Math.pow(ix - th, 2) + Math.pow(iy - th, 2)) + ir;

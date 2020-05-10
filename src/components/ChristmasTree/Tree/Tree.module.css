@@ -21,10 +21,10 @@
 .Tree .treeSet {
   position: relative;
   top: 55px;
-  left: -190px;
-  border-left: 195px solid transparent;
-  border-right: 195px solid transparent;
-  border-bottom: 435px solid transparent;
+  left: -180px;
+  border-left: 190px solid transparent;
+  border-right:200px solid transparent;
+  border-bottom: 450px solid transparent;
   width: 0;
   height: 0;
   transform: rotate(-20deg);
