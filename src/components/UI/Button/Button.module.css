@@ -1,6 +1,6 @@
 .Button {
   width: 75px;
-  color:#930d26;
+  color: #930d26;
   border: none;
   background-color: lightgoldenrodyellow;
   font-weight: bold;
@@ -14,7 +14,6 @@
   text-transform: uppercase;
   margin-top: 4px;
   box-shadow: 0 0 6px #930d26;
-
 }
 .Button:disabled {
   opacity: 0.5;
@@ -24,12 +23,12 @@
 }
 .green {
   background-color: green;
-  color:white;
-  width:100px;
-  margin-right:10px;
+  color: white;
+  width: 100px;
+  margin-right: 10px;
 }
 .red {
   background-color: red;
-  color:white;
-  width:80px;
+  color: white;
+  width: 80px;
 }

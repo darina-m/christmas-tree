@@ -23,12 +23,11 @@
   top: 55px;
   left: -190px;
   border-left: 195px solid transparent;
-  border-right:195px solid transparent;
+  border-right: 195px solid transparent;
   border-bottom: 435px solid transparent;
   width: 0;
   height: 0;
   transform: rotate(-20deg);
-   
 }
 
 .Tree .price {

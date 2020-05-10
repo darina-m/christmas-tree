@@ -1,13 +1,13 @@
-.Navigation{
-    list-style: none;
-    display: flex;
-    flex-direction:column;
-    margin:10px 0;
-    padding: 0;
+.Navigation {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  padding: 0;
 }
-@media(min-width:500px){
-    .Navigation{
-        margin:0 0px;
-        flex-direction: row;
-    }
+@media (min-width: 500px) {
+  .Navigation {
+    margin: 0 0px;
+    flex-direction: row;
+  }
 }

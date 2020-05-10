@@ -1,5 +1,5 @@
-.ChristmasTree{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.ChristmasTree {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }

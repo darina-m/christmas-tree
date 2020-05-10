@@ -7,18 +7,17 @@
   background-color: honeydew;
   border: 1px solid black;
 
-  transition: all .5s ease-out;
-  opacity : 0;
-  transform :translateY(-100vh);
+  transition: all 0.5s ease-out;
+  opacity: 0;
+  transform: translateY(-100vh);
 }
-.show{
-  opacity : 100;
-  transform : translateY(0vh);
+.show {
+  opacity: 100;
+  transform: translateY(0vh);
 }
 
-@media (min-width:600px){
-  .Modal{
+@media (min-width: 600px) {
+  .Modal {
     width: 500px;
   }
 }
-

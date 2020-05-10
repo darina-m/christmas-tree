@@ -11,7 +11,6 @@ export default ({ price, toys }) => {
     }
   });
 
-
   return (
     <div className={classes.Tree}>
       <div className={classes.imageTree}>

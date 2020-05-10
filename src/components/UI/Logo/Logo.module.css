@@ -1,6 +1,6 @@
-.Logo{
- display:flex;
- align-items: center;
+.Logo {
+  display: flex;
+  align-items: center;
 }
 .Logo img {
   width: 60px;
@@ -8,7 +8,7 @@
   margin: 5px;
 }
 .Logo span {
-    font-family: "Mountains of Christmas" , cursive;
-    color: #930d26;
-    font-size: 1.8rem;
+  font-family: "Mountains of Christmas", cursive;
+  color: #930d26;
+  font-size: 1.8rem;
 }
