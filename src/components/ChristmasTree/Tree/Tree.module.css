@@ -5,7 +5,7 @@
   justify-content: space-evenly;
 }
 
-.Tree .image {
+.Tree .imageTree {
   flex-flow: row wrap;
   align-content: flex-start;
   flex-wrap: wrap;
@@ -18,7 +18,7 @@
   height: 485px;
   margin: 0 auto;
 }
-.Tree .tree {
+.Tree .treeSet {
   position: relative;
   top: 55px;
   left: -180px;

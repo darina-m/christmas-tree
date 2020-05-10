@@ -14,8 +14,8 @@ export default ({ price, toys }) => {
 
   return (
     <div className={classes.Tree}>
-      <div className={classes.image}>
-        <div className={classes.tree}>{toysOutput}</div>
+      <div className={classes.imageTree}>
+        <div className={classes.treeSet}>{toysOutput}</div>
       </div>
       <div className={classes.price}>{price} som</div>
     </div>
