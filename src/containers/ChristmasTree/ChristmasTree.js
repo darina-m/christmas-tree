@@ -18,14 +18,7 @@ const PRICES = {
 };
 
 export default withErrorHandler(() => {
-  const [toys, setToys] = useState({
-    blueBall: 0,
-    pinkBall: 0,
-    yellowBall: 0,
-    orangeBall: 0,
-    lightBlueBall: 0,
-    greenBall: 0,
-  });
+  const [toys, setToys] = useState(null);
 
   const [price, setPrice] = useState(100);
   const [canOrder, setCanOrder] = useState(false);
@@ -90,6 +83,27 @@ export default withErrorHandler(() => {
       setPrice(newPrice);
     }
   }
+
+  useEffect(() => {
+    axios.get("/toys.json").then((response) => setToys(response.data));
+  }, []);
+
+  let output = <Spinner />;
+  if (toys) {
+    output = (
+      <>
+        <ToysKit price={price} toys={toys} />
+        <ToysControls
+          startOrder={startOrder}
+          canOrder={canOrder}
+          toys={toys}
+          addToy={addToy}
+          removeToy={removeToy}
+        />
+      </>
+    );
+  }
+
   let orderSummary = <Spinner />;
   if (!loading && isOrdering) {
     orderSummary = (
@@ -104,14 +118,7 @@ export default withErrorHandler(() => {
 
   return (
     <div className={classes.ChristmasTree}>
-      <ToysKit price={price} toys={toys} />
-      <ToysControls
-        startOrder={startOrder}
-        canOrder={canOrder}
-        toys={toys}
-        addToy={addToy}
-        removeToy={removeToy}
-      />
+      {output}
       <Modal show={isOrdering} hideCallback={cancelOrder}>
         {orderSummary}
       </Modal>
