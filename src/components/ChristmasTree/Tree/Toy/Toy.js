@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import classes from "./Toys.module.css";
+import classes from "./Toy.module.css";
 
 export default memo(({ type }) => {
   const toysClasses = [classes.Toys, classes[type]];

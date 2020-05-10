@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ToysKit from "../../components/ChristmasTree/ToysKit/ToysKit";
+import ToysKit from "../../components/ChristmasTree/Tree/Tree";
 import ToysControls from "../../components/ChristmasTree/ToysControls/ToysControls";
 import Modal from "../../components/UI/Modal/Modal";
 import classes from "./ChristmasTree.module.css";
