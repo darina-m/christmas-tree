@@ -7,3 +7,5 @@
 [0426/015535.875:ERROR:exception_snapshot_win.cc(98)] thread ID 8696 not found in process
 [0508/192453.768:ERROR:process_info.cc(359)] UncheckedAllocate
 [0508/192511.270:ERROR:process_info.cc(359)] UncheckedAllocate
+[0510/164001.139:ERROR:process_reader_win.cc(90)] NtQuerySystemInformation: {Недостаточно квот} Недостаточно квот на виртуальную память или файл подкачки для завершения требуемой операции. (0xc0000017)
+[0510/164001.171:ERROR:exception_snapshot_win.cc(98)] thread ID 3612 not found in process
