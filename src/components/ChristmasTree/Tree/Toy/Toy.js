@@ -4,9 +4,9 @@ import classes from "./Toy.module.css";
 export default memo(({ type }) => {
   const toysClasses = [classes.Toys, classes[type]];
 
-  const pd = 50;
-  const th = 430;
-  const tw = 290;
+  const pd = 40;
+  const th = 380;
+  const tw = 260;
 
   let stylePos = null;
   const getPosition = (ir) => {
