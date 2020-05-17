@@ -24,7 +24,6 @@ export default withErrorHandler(() => {
   const [price, setPrice] = useState(100);
   const [canOrder, setCanOrder] = useState(false);
   const [isOrdering, setIsOrdering] = useState(false);
-  const [loading, setLoading] = useState(false);
   const history = useHistory();
 
   function checkCanOrder(toys) {
@@ -46,7 +45,7 @@ export default withErrorHandler(() => {
     const queryParms = Object.keys(toys).map(
       (toy) => encodeURIComponent(toy) + "=" + encodeURIComponent(toys[toy])
     );
-    queryParms.push("price=" +encodeURIComponent (price));
+    queryParms.push("price=" + encodeURIComponent(price));
 
     history.push({
       pathname: "./checkout",
@@ -97,7 +96,7 @@ export default withErrorHandler(() => {
   }
 
   let orderSummary = <Spinner />;
-  if (!loading && isOrdering) {
+  if ( isOrdering) {
     orderSummary = (
       <OrderSummary
         toys={toys}
