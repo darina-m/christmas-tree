@@ -20,7 +20,7 @@
 .NavigationItem .active {
   border-color: #930d26;
 }
-@media (min-width: 500px) {
+@media (min-width: 640px) {
   .NavigationItem a {
     border: none;
     border-bottom: 5px solid transparent;
