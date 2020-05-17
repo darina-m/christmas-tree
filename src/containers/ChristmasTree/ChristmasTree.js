@@ -7,6 +7,7 @@ import OrderSummary from "../../components/ChristmasTree/OrderSummary/OrderSumma
 import axios from "../../axios";
 import Spinner from "../../components/UI/Spinner/Spinner";
 import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
+import { useHistory } from "react-router-dom";
 
 const PRICES = {
   blueBall: 7,
@@ -24,6 +25,7 @@ export default withErrorHandler(() => {
   const [canOrder, setCanOrder] = useState(false);
   const [isOrdering, setIsOrdering] = useState(false);
   const [loading, setLoading] = useState(false);
+  const history = useHistory();
 
   function checkCanOrder(toys) {
     const total = Object.keys(toys).reduce((total, toy) => {
@@ -41,24 +43,14 @@ export default withErrorHandler(() => {
   }
 
   function finishOrder() {
-    const order = {
-      toys: toys,
-      price: price,
-      delivery: "Fast",
-      customer: {
-        name: "Bakyt",
-        phone: "0700700700",
-        address: {
-          street: "123 Gebze",
-          city: "Karakol",
-        },
-      },
-    };
+    const queryParms = Object.keys(toys).map(
+      (toy) => encodeURIComponent(toy) + "=" + encodeURIComponent(toys[toy])
+    );
+    queryParms.push("price=" +encodeURIComponent (price));
 
-    setLoading(true);
-    axios.post("/orders.json", order).then((response) => {
-      setLoading(false);
-      setIsOrdering(false);
+    history.push({
+      pathname: "./checkout",
+      search: queryParms.join("&"),
     });
   }
 

@@ -18,3 +18,4 @@
 [0517/134348.295:ERROR:process_info.cc(375)] NtQuerySystemInformation SystemExtendedHandleInformation: {Недостаточно квот} Недостаточно квот на виртуальную память или файл подкачки для завершения требуемой операции. (0xc0000017)
 [0517/134611.093:ERROR:process_info.cc(359)] UncheckedAllocate
 [0517/134627.515:ERROR:process_info.cc(359)] UncheckedAllocate
+[0517/141316.798:ERROR:process_info.cc(375)] NtQuerySystemInformation SystemExtendedHandleInformation: {Недостаточно квот} Недостаточно квот на виртуальную память или файл подкачки для завершения требуемой операции. (0xc0000017)
