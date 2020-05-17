@@ -1,8 +1,10 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import classes from "./Checkout.module.css";
 import CheckoutSummary from "../../components/Checkout/CheckoutSummary/CheckoutSummary";
 
 export default () => {
+  const history = useHistory();
   const toys = {
     blueBall: 1,
     orangeBall: 1,
@@ -13,9 +15,22 @@ export default () => {
   };
   const price = 100;
 
+  function checkoutCancel() {
+    history.push("/builder");
+  }
+
+  function checkoutContinue() {
+    history.push("/checkout/finish");
+  }
+
   return (
     <div className={classes.Checkout}>
-      <CheckoutSummary toys={toys} price={price} />
+      <CheckoutSummary
+        toys={toys}
+        price={price}
+        checkoutCancel={checkoutCancel}
+        checkoutContinue={checkoutContinue}
+      />
     </div>
   );
 };
