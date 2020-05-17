@@ -1,19 +1,22 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useHistory, useLocation } from "react-router-dom";
 import classes from "./Checkout.module.css";
 import CheckoutSummary from "../../components/Checkout/CheckoutSummary/CheckoutSummary";
 
 export default () => {
   const history = useHistory();
-  const toys = {
-    blueBall: 1,
-    orangeBall: 1,
-    yellowBall: 1,
-    pinkBall: 1,
-    greenBall: 1,
-    lightBlueBall: 1,
-  };
-  const price = 100;
+  const location = useLocation();
+
+  const query = new URLSearchParams(location.search);
+  let price = 0;
+  let toys = {};
+  query.forEach((value, key) => {
+    if (key === "price") {
+      price = +value;
+    } else {
+      toys[key] = +value;
+    }
+  });
 
   function checkoutCancel() {
     history.push("/builder");
