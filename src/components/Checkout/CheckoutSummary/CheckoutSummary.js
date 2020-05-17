@@ -7,8 +7,8 @@ export default ({ price, toys }) => {
   return (
     <div className={classes.CheckoutSummary}>
       <Tree toys={toys} price={price} />
-      <Button green>Cancel</Button>
-      <Button red>Continue</Button>
+      <Button red>Cancel</Button>
+      <Button green>Continue</Button>
     </div>
   );
 };
