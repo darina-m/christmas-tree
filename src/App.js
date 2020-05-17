@@ -7,7 +7,6 @@ import { Route, Switch, Redirect } from "react-router-dom";
 
 export default () => {
   return (
-    
     <div className="App">
       <Layout>
         <Switch>
