@@ -1,6 +1,6 @@
 .Checkout{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-flow:column nowrap;
+    align-items: center;
     margin: 5px;
 }
