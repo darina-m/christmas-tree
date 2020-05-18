@@ -7,6 +7,6 @@ export default () => (
     <NavigationItem url="/builder" >
       Christmas-tree
     </NavigationItem>
-    <NavigationItem url="/checkout">Checkout</NavigationItem>
+    <NavigationItem url="/orders">Orders</NavigationItem>
   </ul>
 );
