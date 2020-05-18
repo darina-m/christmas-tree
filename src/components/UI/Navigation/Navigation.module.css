@@ -2,10 +2,10 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  margin: 10px 0;
+  margin: 0px 0;
   padding: 0;
 }
-@media (min-width: 640px) {
+@media (min-width: 515px) {
   .Navigation {
     margin: 0 0px;
     flex-direction: row;
