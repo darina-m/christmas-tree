@@ -10,7 +10,7 @@ export default ({ control, removeToy, addToy, disabled }) => {
     <div className={classes.ToysControl}>
       <button
         className={classes.less}
-        onClick={() => dispatch({ type: REMOVE_TOY })}
+        onClick={() => dispatch({ type: REMOVE_TOY, toy: control.type })}
         disabled={disabled}
       >
         -
@@ -18,7 +18,7 @@ export default ({ control, removeToy, addToy, disabled }) => {
       <span className={classes.label}>{control.label}</span>
       <button
         className={classes.more}
-        onClick={() => dispatch({ type: ADD_TOY })}
+        onClick={() => dispatch({ type: ADD_TOY, toy: control.type })}
       >
         +
       </button>

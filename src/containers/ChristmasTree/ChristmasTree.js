@@ -8,6 +8,7 @@ import axios from "../../axios";
 import Spinner from "../../components/UI/Spinner/Spinner";
 import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 import { useHistory } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const PRICES = {
   blueBall: 7,
@@ -19,7 +20,7 @@ const PRICES = {
 };
 
 export default withErrorHandler(() => {
-  const [toys, setToys] = useState(null);
+  const { toys } = useSelector((state) => state);
 
   const [price, setPrice] = useState(100);
   const [canOrder, setCanOrder] = useState(false);
@@ -56,7 +57,7 @@ export default withErrorHandler(() => {
   function addToy(type) {
     const newToys = { ...toys };
     newToys[type]++;
-    setToys(newToys);
+    //setToys(newToys);
     checkCanOrder(newToys);
 
     const newPrice = price + PRICES[type];
@@ -67,7 +68,7 @@ export default withErrorHandler(() => {
     if (toys[type] >= 1) {
       const newToys = { ...toys };
       newToys[type]--;
-      setToys(newToys);
+     // setToys(newToys);
       checkCanOrder(newToys);
 
       const newPrice = price - PRICES[type];
@@ -75,9 +76,9 @@ export default withErrorHandler(() => {
     }
   }
 
-  useEffect(() => {
+  /*useEffect(() => {
     axios.get("/toys.json").then((response) => setToys(response.data));
-  }, []);
+  }, []);*/
 
   let output = <Spinner />;
   if (toys) {
@@ -96,7 +97,7 @@ export default withErrorHandler(() => {
   }
 
   let orderSummary = <Spinner />;
-  if ( isOrdering) {
+  if (isOrdering) {
     orderSummary = (
       <OrderSummary
         toys={toys}
