@@ -10,19 +10,9 @@ import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-const PRICES = {
-  blueBall: 7,
-  pinkBall: 9,
-  yellowBall: 10,
-  orangeBall: 8,
-  lightBlueBall: 12,
-  greenBall: 8,
-};
-
 export default withErrorHandler(() => {
-  const { toys } = useSelector((state) => state);
+  const { toys, price } = useSelector((state) => state);
 
-  const [price, setPrice] = useState(100);
   const [canOrder, setCanOrder] = useState(false);
   const [isOrdering, setIsOrdering] = useState(false);
   const history = useHistory();
@@ -60,19 +50,19 @@ export default withErrorHandler(() => {
     //setToys(newToys);
     checkCanOrder(newToys);
 
-    const newPrice = price + PRICES[type];
-    setPrice(newPrice);
+    // const newPrice = price + PRICES[type];
+    //setPrice(newPrice);
   }
 
   function removeToy(type) {
     if (toys[type] >= 1) {
       const newToys = { ...toys };
       newToys[type]--;
-     // setToys(newToys);
+      // setToys(newToys);
       checkCanOrder(newToys);
 
-      const newPrice = price - PRICES[type];
-      setPrice(newPrice);
+      // const newPrice = price - PRICES[type];
+      // setPrice(newPrice);
     }
   }
 

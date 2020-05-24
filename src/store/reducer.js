@@ -11,7 +11,14 @@ const initialState = {
   },
   price: 100,
 };
-
+const PRICES = {
+  blueBall: 50,
+  orangeBall: 57,
+  pinkBall: 55,
+  greenBall: 45,
+  lightBlueBall: 43,
+  yellowBall: 54,
+};
 export default (state = initialState, action) => {
   switch (action.type) {
     case actions.ADD_TOY:
@@ -21,6 +28,7 @@ export default (state = initialState, action) => {
           ...state.toys,
           [action.toy]: state.toys[action.toy] + 1,
         },
+        price: state.price + PRICES[action.toy],
       };
 
     case actions.REMOVE_TOY:
@@ -30,6 +38,7 @@ export default (state = initialState, action) => {
           ...state.toys,
           [action.toy]: state.toys[action.toy] - 1,
         },
+        price: state.price + PRICES[action.toy],
       };
 
     default:
