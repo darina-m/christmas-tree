@@ -27,7 +27,7 @@ export default withErrorHandler(() => {
       .post("/orders.json", {
         toys,
         price,
-        details: data,
+        customer: data,
       })
       .then((response) => {
         setLoading(false);

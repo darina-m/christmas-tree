@@ -20,7 +20,6 @@ export default withErrorHandler(() => {
     return !canOrder ? number > 0 : canOrder;
   }, false);
 
-  
   /*useEffect(() => {
     axios.get("/toys.json").then((response) => setToys(response.data));
   }, []);*/
@@ -44,7 +43,7 @@ export default withErrorHandler(() => {
     orderSummary = (
       <OrderSummary
         toys={toys}
-        finishOrder={()=> history.push("/checkout")}
+        finishOrder={() => history.push("/checkout")}
         cancelOrder={() => setIsOrdering(false)}
         price={price}
       />
