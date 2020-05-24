@@ -12,13 +12,11 @@ const CONTROLS = [
   { label: "Yellow ball", type: "yellowBall" },
 ];
 
-export default ({ canOrder, toys, addToy, removeToy, startOrder }) => {
+export default ({ canOrder, toys, startOrder }) => {
   const controlsOutput = CONTROLS.map((control) => (
     <ToysControl
       key={control.type}
       control={control}
-      addToy={addToy}
-      removeToy={removeToy}
       disabled={toys[control.type] === 0}
     />
   ));
