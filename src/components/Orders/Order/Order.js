@@ -10,20 +10,25 @@ const CONTROLS = {
   lightBlueball: "Light-blue ball",
 };
 
-export default ({ price, toys, details }) => {
+export default ({ price, toys, customer }) => {
   const toysOutput = Object.keys(toys).map((key) => (
     <span key={key} className={classes.toy}>
       {CONTROLS[key]} ({toys[key]})
     </span>
   ));
-
+  const customerOutput = (
+    <div className={classes.customer}>
+      {customer
+        ? customer.name + ", " + customer.phone + ", " + customer.address
+        : "No customer available"}
+    </div>
+  );
   return (
     <div className={classes.Order}>
-      <div className={classes.details}>
-        {details.name}, {details.phone}, {details.address}
-      </div>
+     {customerOutput}
       <div className={classes.price}>{price} som</div>
       <div className={classes.toys}>{toysOutput}</div>
     </div>
   );
+    
 };
