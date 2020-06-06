@@ -7,7 +7,7 @@ const CONTROLS = {
   pinkBall: "Pink ball",
   yellowBall: "Yellow ball",
   greenBall: "Green ball",
-  lightBlueball: "Light-blue ball",
+  lightBlueBall: "Light-blue ball",
 };
 
 export default ({ price, toys, details }) => {

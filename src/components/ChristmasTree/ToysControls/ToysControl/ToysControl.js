@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./ToysControl.module.css";
 import { useDispatch } from "react-redux";
-import { ADD_TOY, REMOVE_TOY } from "../../../../store/actions";
+import { ADD_TOY, REMOVE_TOY } from "../../../../store/actions/types";
 
 export default ({ control, disabled }) => {
   const dispatch = useDispatch();
