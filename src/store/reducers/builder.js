@@ -36,6 +36,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         toys: action.toys,
+        price: initialState.price,
       };
 
     default:
