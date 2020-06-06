@@ -5,9 +5,9 @@ import classes from "./Tree.module.css";
 export default ({ price, toys }) => {
   let toysOutput = [];
 
-  Object.keys(toys).forEach((type) => {
-    for (let i = 0; i < toys[type]; i++) {
-      toysOutput.push(<Toy key={type + i} type={type} />);
+  Object.keys(toys).forEach((toy) => {
+    for (let i = 0; i < toys[toy].quantity; i++) {
+      toysOutput.push(<Toy key={toy + i} type={toy} />);
     }
   });
 
