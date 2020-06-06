@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./ToysControl.module.css";
 import { useDispatch } from "react-redux";
-import { ADD_TOY, REMOVE_TOY } from "../../../../store/actions/types";
+import { remove, add } from "../../../../store/actions/builder";
 
 export default ({ control, disabled }) => {
   const dispatch = useDispatch();
@@ -10,7 +10,7 @@ export default ({ control, disabled }) => {
     <div className={classes.ToysControl}>
       <button
         className={classes.less}
-        onClick={() => dispatch({ type: REMOVE_TOY, toy: control.type })}
+        onClick={() => remove(dispatch, control.type)}
         disabled={disabled}
       >
         -
@@ -18,7 +18,7 @@ export default ({ control, disabled }) => {
       <span className={classes.label}>{control.label}</span>
       <button
         className={classes.more}
-        onClick={() => dispatch({ type: ADD_TOY, toy: control.type })}
+        onClick={() => add(dispatch, control.type)}
       >
         +
       </button>
