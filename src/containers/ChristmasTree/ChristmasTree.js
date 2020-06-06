@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Tree from "../../components/ChristmasTree/Tree/Tree";
 import ToysControls from "../../components/ChristmasTree/ToysControls/ToysControls";
 import Modal from "../../components/UI/Modal/Modal";
@@ -8,24 +8,24 @@ import axios from "../../axios";
 import Spinner from "../../components/UI/Spinner/Spinner";
 import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 import { useHistory } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { load } from "../../store/actions/builder";
 
 export default withErrorHandler(() => {
   const { toys, price } = useSelector((state) => state);
 
   const [isOrdering, setIsOrdering] = useState(false);
   const history = useHistory();
-
-  const canOrder = Object.values(toys).reduce((canOrder, toy) => {
-    return !canOrder ? toy.quantity > 0 : canOrder;
-  }, false);
-
-  /*useEffect(() => {
-    axios.get("/toys.json").then((response) => setToys(response.data));
-  }, []);*/
+  const dispatch = useDispatch();
+  useEffect(() => {
+    load(dispatch);
+  }, [dispatch]);
 
   let output = <Spinner />;
   if (toys) {
+    const canOrder = Object.values(toys).reduce((canOrder, toy) => {
+      return !canOrder ? toy.quantity > 0 : canOrder;
+    }, false);
     output = (
       <>
         <Tree price={price} toys={toys} />
@@ -34,28 +34,17 @@ export default withErrorHandler(() => {
           canOrder={canOrder}
           toys={toys}
         />
+        <Modal show={isOrdering} hideCallback={() => setIsOrdering(false)}>
+          <OrderSummary
+            toys={toys}
+            finishOrder={() => history.push("/checkout")}
+            cancelOrder={() => setIsOrdering(false)}
+            price={price}
+          />
+        </Modal>
       </>
     );
   }
 
-  let orderSummary = <Spinner />;
-  if (isOrdering) {
-    orderSummary = (
-      <OrderSummary
-        toys={toys}
-        finishOrder={() => history.push("/checkout")}
-        cancelOrder={() => setIsOrdering(false)}
-        price={price}
-      />
-    );
-  }
-
-  return (
-    <div className={classes.ChristmasTree}>
-      {output}
-      <Modal show={isOrdering} hideCallback={() => setIsOrdering(false)}>
-        {orderSummary}
-      </Modal>
-    </div>
-  );
+  return <div className={classes.ChristmasTree}>{output}</div>;
 }, axios);

@@ -1,14 +1,7 @@
 import * as types from "../actions/types";
 
 const initialState = {
-  toys: {
-    blueBall: { quantity: 1, price: 50, label: "BLue ball" },
-    orangeBall: { quantity: 1, price: 57, label: "Orange ball" },
-    pinkBall: { quantity: 1, price: 55, label: "Pink ball" },
-    greenBall: { quantity: 1, price: 45, label: "Green ball" },
-    lightBlueBall: { quantity: 1, price: 43, label: "Light-blue ball" },
-    yellowBall: { quantity: 1, price: 54, label: " Yellow ball" },
-  },
+  toys: null,
   price: 100,
 };
 
@@ -38,6 +31,11 @@ export default (state = initialState, action) => {
           },
         },
         price: state.price + state.toys[action.toy].price,
+      };
+    case types.SET_TOYS:
+      return {
+        ...state,
+        toys: action.toys,
       };
 
     default:
