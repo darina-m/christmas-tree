@@ -2,23 +2,16 @@ import * as types from "../actions/types";
 
 const initialState = {
   toys: {
-    blueBall: 1,
-    orangeBall: 1,
-    pinkBall: 1,
-    greenBall: 1,
-    lightBlueBall: 1,
-    yellowBall: 1,
+    blueBall: { quantity: 1, price: 50, label: "BLue ball" },
+    orangeBall: { quantity: 1, price: 57, label: "Orange ball" },
+    pinkBall: { quantity: 1, price: 55, label: "Pink ball" },
+    greenBall: { quantity: 1, price: 45, label: "Green ball" },
+    lightBlueBall: { quantity: 1, price: 43, label: "Light-blue ball" },
+    yellowBall: { quantity: 1, price: 54, label: " Yellow ball" },
   },
   price: 100,
 };
-const PRICES = {
-  blueBall: 50,
-  orangeBall: 57,
-  pinkBall: 55,
-  greenBall: 45,
-  lightBlueBall: 43,
-  yellowBall: 54,
-};
+
 export default (state = initialState, action) => {
   switch (action.type) {
     case types.ADD_TOY:
@@ -26,9 +19,12 @@ export default (state = initialState, action) => {
         ...state,
         toys: {
           ...state.toys,
-          [action.toy]: state.toys[action.toy] + 1,
+          [action.toy]: {
+            ...state.toys[action.toy],
+            quantity: state.toys[action.toy].quantity + 1,
+          },
         },
-        price: state.price + PRICES[action.toy],
+        price: state.price + state.toys[action.toy].price,
       };
 
     case types.REMOVE_TOY:
@@ -36,9 +32,12 @@ export default (state = initialState, action) => {
         ...state,
         toys: {
           ...state.toys,
-          [action.toy]: state.toys[action.toy] - 1,
+          [action.toy]: {
+            ...state.toys[action.toy],
+            quantity: state.toys[action.toy].quantity - 1,
+          },
         },
-        price: state.price + PRICES[action.toy],
+        price: state.price + state.toys[action.toy].price,
       };
 
     default:

@@ -2,21 +2,12 @@ import React from "react";
 import Button from "../../UI/Button/Button";
 import classes from "./OrderSummary.module.css";
 
-const LABELS = {
-  pinkBall: "Pink ball",
-  orangeBall: "Orange ball",
-  greenBall: "Green ball",
-  lightBlueBall: "Light-blue ball",
-  blueBall: "Blue ball",
-  yellowBall: "Yellow ball",
-};
-
 export default ({ toys, cancelOrder, finishOrder, price }) => {
   const toysOutput = Object.keys(toys)
-    .filter((toy) => toys[toy] > 0)
+    .filter((toy) => toys[toy].quantity > 0)
     .map((toy) => (
       <li key={toys}>
-        {LABELS[toy]}: {toys[toy]}
+        {toys[toy].label}: {toys[toy].quantity}
       </li>
     ));
 

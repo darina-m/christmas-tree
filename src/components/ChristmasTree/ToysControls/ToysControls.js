@@ -3,21 +3,13 @@ import ToysControl from "./ToysControl/ToysControl";
 import Button from "../../UI/Button/Button";
 import classes from "./ToysControls.module.css";
 
-const CONTROLS = [
-  { label: "Pink ball", type: "pinkBall" },
-  { label: "Orange ball", type: "orangeBall" },
-  { label: "Green ball", type: "greenBall" },
-  { label: "Light-blue ball", type: "lightBlueBall" },
-  { label: "Blue ball", type: "blueBall" },
-  { label: "Yellow ball", type: "yellowBall" },
-];
-
 export default ({ canOrder, toys, startOrder }) => {
-  const controlsOutput = CONTROLS.map((control) => (
+  const controlsOutput = Object.keys(toys).map((toy) => (
     <ToysControl
-      key={control.type}
-      control={control}
-      disabled={toys[control.type] === 0}
+      key={toy}
+      toy={toy}
+      label={toys[toy].label}
+      disabled={toys[toy].quantity === 0}
     />
   ));
 
