@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Layout from "./containers/Layout/Layout.js";
 import ChristmasTree from "./containers/ChristmasTree/ChristmasTree";
-import Checkout from "./containers/Checkout/Checkout";
+import Checkout from "./components/Checkout/Checkout";
 import { Route, Switch, Redirect } from "react-router-dom";
 import Orders from "./containers/Orders/Orders";
 
