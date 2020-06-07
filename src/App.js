@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Auth from "./components/Auth/Auth";
 import Layout from "./containers/Layout/Layout.js";
 import ChristmasTree from "./containers/ChristmasTree/ChristmasTree";
 import Checkout from "./components/Checkout/Checkout";
@@ -22,6 +23,9 @@ export default () => {
           </Route>
           <Route path="/orders">
             <Orders />
+          </Route>{" "}
+          <Route path="/auth">
+            <Auth />
           </Route>
         </Switch>
       </Layout>
