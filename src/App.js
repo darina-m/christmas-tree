@@ -8,7 +8,6 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import Orders from "./containers/Orders/Orders";
 
 export default () => {
-  
   return (
     <div className="App">
       <Layout>

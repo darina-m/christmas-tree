@@ -16,4 +16,3 @@ export const fail = (dispatch, errors) => dispatch({
 export const auth = (dispatch, email, password) => axios.post()
   .then(({ data }) => success(dispatch, data))
   .catch(error => fail(dispatch, error)); 
-  
