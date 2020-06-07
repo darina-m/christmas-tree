@@ -15,7 +15,7 @@ export default withAxios(() => {
     start(dispatch);
 
     const data = new FormData(event.target);
-    auth(dispatch, method,data.get("email"), data.get("password"));
+    auth(dispatch, method, data.get("email"), data.get("password"));
 
     event.preventDefault();
   };
@@ -24,7 +24,7 @@ export default withAxios(() => {
   if (!loading) {
     formOutput = (
       <form onSubmit={formSubmitted}>
-        <h1>Welcome</h1>
+        <h1>Welcome!</h1>
         <input type="email" placeholder="E-mail" name="email" required />
         <input
           type="password"
