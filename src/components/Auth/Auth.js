@@ -5,6 +5,7 @@ import classes from "./Auth.module.css";
 import { start, auth } from "../../store/actions/auth";
 import Button from "../UI/Button/Button";
 import { useDispatch, useSelector } from "react-redux";
+import Spinner from "../UI/Spinner/Spinner";
 
 export default withAxios(() => {
   const dispatch = useDispatch();

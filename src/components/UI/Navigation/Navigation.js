@@ -8,5 +8,6 @@ export default () => (
       Christmas-tree
     </NavigationItem>
     <NavigationItem url="/orders">Orders</NavigationItem>
+    <NavigationItem url="/auth">Authenticate </NavigationItem>
   </ul>
 );
