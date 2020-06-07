@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 export default withAxios(() => {
   const dispatch = useDispatch();
-  const { loading } = useSelector((state) => state.auth);
+  const { loading, error } = useSelector(state => state.auth);
 
   const formSubmitted = (event) => {
     start(dispatch);
@@ -35,6 +35,10 @@ export default withAxios(() => {
         <Button green>Submit</Button>
       </form>
     );
+  }
+  let errorOutput = null;
+  if (error) {
+    errorOutput = <h4 className={classes.error}>{error.message}</h4>;
   }
   return <div className={classes.Auth}>{formOutput}</div>;
 }, axios);
