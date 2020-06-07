@@ -30,7 +30,7 @@ export default (state = initialState, action) => {
             quantity: state.toys[action.toy].quantity - 1,
           },
         },
-        price: state.price + state.toys[action.toy].price,
+        price: state.price - state.toys[action.toy].price,
       };
     case types.SET_TOYS:
       return {
