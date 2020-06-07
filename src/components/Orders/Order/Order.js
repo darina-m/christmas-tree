@@ -1,21 +1,12 @@
 import React from "react";
 import classes from "./Order.module.css";
 
-const CONTROLS = {
-  blueBall: "Blue ball",
-  orangeBall: "Orange ball",
-  pinkBall: "Pink ball",
-  yellowBall: "Yellow ball",
-  greenBall: "Green ball",
-  lightBlueBall: "Light-blue ball",
-};
-
 export default ({ price, toys, details }) => {
   let toysOutput = null;
   if (toys) {
-    toysOutput = Object.keys(toys).map((key) => (
-      <span key={key} className={classes.toy}>
-        {CONTROLS[key]} ({toys[key]})
+    toysOutput = Object.keys(toys).map((toy) => (
+      <span key={toy} className={classes.toy}>
+        {toys[toy].label} ({toys[toy].quantity})
       </span>
     ));
   }
