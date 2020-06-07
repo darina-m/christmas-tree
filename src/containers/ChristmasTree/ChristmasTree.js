@@ -6,12 +6,12 @@ import classes from "./ChristmasTree.module.css";
 import OrderSummary from "../../components/ChristmasTree/OrderSummary/OrderSummary";
 import axios from "../../axios";
 import Spinner from "../../components/UI/Spinner/Spinner";
-import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
+import withAxios from "../../hoc/withAxios/withAxios";
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { load } from "../../store/actions/builder";
 
-export default withErrorHandler(() => {
+export default withAxios(() => {
   const { toys, price } = useSelector(state => state.builder);
 
   const [isOrdering, setIsOrdering] = useState(false);
