@@ -6,9 +6,9 @@ import ChristmasTree from "./containers/ChristmasTree/ChristmasTree";
 import Checkout from "./components/Checkout/Checkout";
 import { Route, Switch, Redirect } from "react-router-dom";
 import Orders from "./containers/Orders/Orders";
+import Logout from "./components/Logout/Logout";
 
 export default () => {
-  
   return (
     <div className="App">
       <Layout>
@@ -27,6 +27,9 @@ export default () => {
           </Route>{" "}
           <Route path="/auth">
             <Auth />
+          </Route>
+          <Route path="/logout">
+            <Logout />
           </Route>
         </Switch>
       </Layout>
