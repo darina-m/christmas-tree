@@ -13,8 +13,10 @@ export const success = (dispatch, { idToken, localId }) =>
     token: idToken,
   });
 
-  export const fail = (dispatch, error) => dispatch({
-    type: AUTH_FAIL, error
+export const fail = (dispatch, error) =>
+  dispatch({
+    type: AUTH_FAIL,
+    error,
   });
 
 export const logout = (dispatch) =>
@@ -34,10 +36,24 @@ export const auth = (dispatch, method, email, password) =>
     .post(method === "signin" ? signInUrl : signUpUrl, {
       email,
       password,
-      returnSecureToken: true
+      returnSecureToken: true,
     })
     .then(({ data }) => {
+      localStorage.setItem("idToken", data.idToken);
+      localStorage.setItem("localId", data.localId);
+
       success(dispatch, data);
       timeout(dispatch, +data.expiresIn);
     })
-    .catch(error => fail(dispatch, error));
+    .catch((error) => fail(dispatch, error));
+
+export const restore = (dispatch) => {
+  const idToken = localStorage.getItem("idToken");
+  const localId = localStorage.getItem("localId");
+
+  if (idToken && localId) {
+    success(dispatch, { idToken, localId });
+  } else {
+    logout(dispatch);
+  }
+};
