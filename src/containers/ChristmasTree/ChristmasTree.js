@@ -12,14 +12,22 @@ import { useSelector, useDispatch } from "react-redux";
 import { load } from "../../store/actions/builder";
 
 export default withAxios(() => {
-  const { toys, price } = useSelector(state => state.builder);
-
+  const { toys, price } = useSelector((state) => state.builder);
+  const isAuthenticated = useSelector((state) => state.auth.token !== null);
   const [isOrdering, setIsOrdering] = useState(false);
   const history = useHistory();
   const dispatch = useDispatch();
   useEffect(() => {
     load(dispatch);
   }, [dispatch]);
+
+  function startOrder() {
+    if (isAuthenticated) {
+      setIsOrdering(true);
+    } else {
+      history.push("/auth?checkout");
+    }
+  }
 
   let output = <Spinner />;
   if (toys) {
@@ -29,11 +37,7 @@ export default withAxios(() => {
     output = (
       <>
         <Tree price={price} toys={toys} />
-        <ToysControls
-          startOrder={() => setIsOrdering(true)}
-          canOrder={canOrder}
-          toys={toys}
-        />
+        <ToysControls startOrder={startOrder} canOrder={canOrder} toys={toys} />
         <Modal show={isOrdering} hideCallback={() => setIsOrdering(false)}>
           <OrderSummary
             toys={toys}
