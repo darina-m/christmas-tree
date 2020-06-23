@@ -47,7 +47,7 @@ export const restore = (dispatch) => {
   } else {
     logout(dispatch);
   }
-}
+};
 
 export const timeout = (dispatch, seconds) =>
   setTimeout(() => logout(dispatch), seconds * 1000);
