@@ -23,6 +23,23 @@ export const logout = (dispatch) =>
   dispatch({
     type: AUTH_LOGOUT,
   });
+
+export const restore = (dispatch) => {
+  const idToken = localStorage.getItem("idToken");
+  const localId = localStorage.getItem("localId");
+
+  if (idToken && localId) {
+    const expirationDate = new Date(localStorage.getItem("expirationDate"));
+    if (expirationDate > new Date()) {
+      success(dispatch, { idToken, localId });
+      timeout(
+        dispatch,
+        (expirationDate.getTime() - new Date().getTime()) / 1000
+      );
+    }
+  }
+};
+
 export const timeout = (dispatch, seconds) =>
   setTimeout(() => logout(dispatch), seconds * 1000);
 const key = "AIzaSyCNDNWnsm7XXc3tfClbnz1Mu2AdE99smiI";
@@ -46,14 +63,3 @@ export const auth = (dispatch, method, email, password) =>
       timeout(dispatch, +data.expiresIn);
     })
     .catch((error) => fail(dispatch, error));
-
-export const restore = (dispatch) => {
-  const idToken = localStorage.getItem("idToken");
-  const localId = localStorage.getItem("localId");
-
-  if (idToken && localId) {
-    success(dispatch, { idToken, localId });
-  } else {
-    logout(dispatch);
-  }
-};
