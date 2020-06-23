@@ -11,7 +11,7 @@ import { useSelector } from "react-redux";
 export default withAxios(({ loading }) => {
   const history = useHistory();
   const { toys, price } = useSelector((state) => state.builder);
-  const { token } = useSelector(state => state.auth);
+  const { token, id } = useSelector(state => state.auth);
 
   function checkoutCancel() {
     history.push("/builder");
