@@ -71,4 +71,5 @@ export const auth = (dispatch, method, email, password) =>
       success(dispatch, data);
       timeout(dispatch, +data.expiresIn);
     })
+    
     .catch((error) => fail(dispatch, error));
