@@ -11,7 +11,7 @@ import { Redirect, useLocation } from "react-router-dom";
 export default withAxios(() => {
   const dispatch = useDispatch();
   const [method, setMethod] = useState(null);
-  const { loading, error, token } = useSelector((state) => state.auth);
+  const { loading, error, token } = useSelector(state => state.auth);
   const location = useLocation();
 
   const formSubmitted = (event) => {
