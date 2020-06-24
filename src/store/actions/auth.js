@@ -47,7 +47,7 @@ export const restore = (dispatch) => {
   } else {
     logout(dispatch);
   }
-};
+}
 
 export const timeout = (dispatch, seconds) =>
   setTimeout(() => logout(dispatch), seconds * 1000);
@@ -65,11 +65,12 @@ export const auth = (dispatch, method, email, password) =>
       returnSecureToken: true,
     })
     .then(({ data }) => {
+      const expirationDate = new Date(new Date().getTime() + data.expiresIn * 1000);
+      localStorage.setItem("expirationDate", expirationDate);
       localStorage.setItem("idToken", data.idToken);
       localStorage.setItem("localId", data.localId);
-
+  
       success(dispatch, data);
       timeout(dispatch, +data.expiresIn);
     })
-    
-    .catch((error) => fail(dispatch, error));
+    .catch(error => fail(dispatch, error));
